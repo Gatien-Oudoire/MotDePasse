@@ -5,12 +5,18 @@ import sys
 print("Bienvenue dans le gestionnaire de mot de passe ")
 print("-----------------------------------------------")
 
+choix = 0
+
+if len(sys.argv) > 1:
+    choix = int(sys.argv[1])
+
 while True:
-    print("[1] -> Mot de passe aléatoire")
-    print("[2] -> Chiffrer mot de passe")
-    print("[3] -> Dechiffrer mot de passe")
-    print("[4] -> Sortir")
-    choix = int(input("Votre choix : "))
+    if choix == 0:
+        print("[1] -> Mot de passe aléatoire")
+        print("[2] -> Chiffrer mot de passe")
+        print("[3] -> Dechiffrer mot de passe")
+        print("[4] -> Sortir")
+        choix = int(input("Votre choix : "))
 
     if choix == 1:
         nombre = int(input("Entrez la taille du mot de passe \n"))
@@ -28,5 +34,6 @@ while True:
         exit(0)
 
     print("\n")
+    choix = 0
 
 print("Merci de votre utilisation")
