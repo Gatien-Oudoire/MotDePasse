@@ -40,6 +40,12 @@ int main(int argc, char *argv[])
 			string mdp = genererMotDePasse(taille);
 			cout << "Le mot de passe est : " << mdp;
 		}
+		else if (choix == '2')
+		{
+			cout << "Entrez le mot de passe : ";
+			cin >> texte;
+			cout << "Resultat du chiffrement : " << chiffrer(texte, 4) << endl;
+		}
 		else if (choix == '6')
 		{
 			return 0;
