@@ -26,9 +26,9 @@ int main(int argc, char *argv[])
 			cout << "Options:" << endl;
 			cout << "[1] -> Generer un mot de passe" << endl;
 			cout << "[2] -> Chiffrer mot de passe" << endl;
-      			cout << "[3] -> Dechiffrer mot de passe" << endl;
-      			cout << "[4] -> Ajouter des identifiants" << endl;
-      			cout << "[5] -> Lire des identifiants" << endl;
+      cout << "[3] -> Dechiffrer mot de passe" << endl;
+      cout << "[4] -> Ajouter des identifiants" << endl;
+      cout << "[5] -> Lire des identifiants" << endl;
 			cout << "[6] -> Quitter" << endl;
 			cout << "Entrez votre choix :" << endl;
 			cin >> choix;
