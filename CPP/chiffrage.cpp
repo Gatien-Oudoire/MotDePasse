@@ -20,3 +20,31 @@ string genererMotDePasse(int taille)
 	return resultat;
 
 }
+
+string chiffrer(string texte, int decalage)
+{
+    char caracteres[] = {'a','A','b','B','c','C','d','D','e','E','f','F','g','G','h','H','i','I','j','J','k','K','l','L','m','M','n','N','o','O','p','P','q','Q','r','R','s','S','t','T','u','U','v','V','w','W','x','X','y','Y','z','Z','0','1','2','3','4','5','6','7','8','9','.','@','#','%','$','!'};
+    string resultat("");
+    bool dansListe(false);
+    for (int i = 0; i < texte.size(); i++)
+    {
+        dansListe = false;
+        int indicateur = 0;
+        for (int j = 0; j < 68-decalage; j++)
+        {
+            if (caracteres[j] == texte[i])
+            {
+                dansListe = true;
+                indicateur = j;
+            }
+            if (dansListe)
+            {
+            resultat += caracteres[indicateur+decalage];
+            break;
+            }
+        
+        }
+    }
+    cout << endl << resultat << endl;
+    return resultat;
+}
